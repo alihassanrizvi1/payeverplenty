@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ruleset name="payever_plentymarkets">
+    <description>payever coding rules for plentymarkets</description>
+    <rule ref="./vendor/payever/plugins-stub/phpcs.xml" />
+</ruleset>

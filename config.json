@@ -1,0 +1,2312 @@
+{
+  "formatVersion": 1,
+  "menu": {
+    "Config.SettingsTab": {
+      "label": "Config.SettingsTab",
+      "formFields": {
+        "environment": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.environmentLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.environmentPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.environmentPossibleValue1"
+              }
+            ]
+          }
+        },
+        "clientId": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.clientIdLabel",
+          "options": {
+            "defaultValue": ""
+          }
+        },
+        "clientSecret": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.clientSecretLabel",
+          "options": {
+            "defaultValue": ""
+          }
+        },
+        "slug": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.slugLabel",
+          "options": {
+            "defaultValue": ""
+          }
+        },
+        "display_payment_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.displayPaymentFeeLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "display_payment_icon": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.displayPaymentIconLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "display_payment_description": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.displayPaymentDescriptionLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "redirect_to_payever": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.redirectToPayeverLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.redirectToPayeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.redirectToPayeverPossibleValue1"
+              },
+              {
+                "value": "2",
+                "caption": "Config.redirectToPayeverPossibleValue2"
+              }
+            ]
+          }
+        },
+        "order_before_payment": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.orderBeforePaymentLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Config.CreditCardTab": {
+      "label": "Config.CreditCardTab",
+      "formFields": {
+        "stripe.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "stripe.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Credit Card"
+          }
+        },
+        "stripe.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "Pay simply with your credit card. We accept MasterCard, Visa or American Express."
+          }
+        },
+        "stripe.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "stripe.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0.25"
+          }
+        },
+        "stripe.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "2.9"
+          }
+        },
+        "stripe.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "0.5"
+          }
+        },
+        "stripe.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "100000"
+          }
+        },
+        "stripe.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "all"
+          }
+        },
+        "stripe.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "all"
+          }
+        }
+      }
+    },
+    "Config.StripeDirectDebitTab": {
+      "label": "Config.StripeDirectDebitTab",
+      "formFields": {
+        "stripe_directdebit.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "stripe_directdebit.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Stripe Direct Debit"
+          }
+        },
+        "stripe_directdebit.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "Accept SEPA Direct Debit Payments with Stripe."
+          }
+        },
+        "stripe_directdebit.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "stripe_directdebit.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0.25"
+          }
+        },
+        "stripe_directdebit.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "2.9"
+          }
+        },
+        "stripe_directdebit.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "stripe_directdebit.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "100000"
+          }
+        },
+        "stripe_directdebit.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "all"
+          }
+        },
+        "stripe_directdebit.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "all"
+          }
+        }
+      }
+    },
+    "Config.DirectDebitTab": {
+      "label": "Config.DirectDebitTab",
+      "formFields": {
+        "paymill_directdebit.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "paymill_directdebit.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Direct Debit"
+          }
+        },
+        "paymill_directdebit.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "Simply pay via direct debit."
+          }
+        },
+        "paymill_directdebit.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "paymill_directdebit.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0.28"
+          }
+        },
+        "paymill_directdebit.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "paymill_directdebit.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "paymill_directdebit.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "10000"
+          }
+        },
+        "paymill_directdebit.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "DE"
+          }
+        },
+        "paymill_directdebit.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "all"
+          }
+        }
+      }
+    },
+    "Config.PaymillCreditCardTab": {
+      "label": "Config.PaymillCreditCardTab",
+      "formFields": {
+        "paymill_creditcard.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "paymill_creditcard.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Paymill Credit Card"
+          }
+        },
+        "paymill_creditcard.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "Pay your order with credit card. We accept Visa, Mastercard and American Express."
+          }
+        },
+        "paymill_creditcard.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "paymill_creditcard.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0.28"
+          }
+        },
+        "paymill_creditcard.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "2.95"
+          }
+        },
+        "paymill_creditcard.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "paymill_creditcard.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "10000"
+          }
+        },
+        "paymill_creditcard.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "all"
+          }
+        },
+        "paymill_creditcard.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "all"
+          }
+        }
+      }
+    },
+    "Config.PayPalTab": {
+      "label": "Config.PayPalTab",
+      "formFields": {
+        "paypal.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "paypal.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "PayPal"
+          }
+        },
+        "paypal.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "PayPal. Want it, get it."
+          }
+        },
+        "paypal.redirect_method": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverRedirectMethod",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "paypal.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "paypal.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0.35"
+          }
+        },
+        "paypal.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "1.9"
+          }
+        },
+        "paypal.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "0.02"
+          }
+        },
+        "paypal.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "10000"
+          }
+        },
+        "paypal.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "all"
+          }
+        },
+        "paypal.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "AUD,CAD,CZK,DKK,EUR,GBP,HKD,HUF,ILS,JPY,MYR,MXN,NOK,NZD,PHP,PLN,SGD,SEK,CHF,TWD,THB,TRY,USD"
+          }
+        }
+      }
+    },
+    "Config.SantanderInvoiceNOTab": {
+      "label": "Config.SantanderInvoiceNOTab",
+      "formFields": {
+        "santander_invoice_no.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_invoice_no.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Santander Invoice NO"
+          }
+        },
+        "santander_invoice_no.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "Kj&oslash;p n&aring;  - betal etter levering. Fakturaen sendes p&aring;  epost fra Santander Consumer Bank."
+          }
+        },
+        "santander_invoice_no.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_invoice_no.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "santander_invoice_no.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "santander_invoice_no.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "199"
+          }
+        },
+        "santander_invoice_no.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "20000"
+          }
+        },
+        "santander_invoice_no.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "NO"
+          }
+        },
+        "santander_invoice_no.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "NOK"
+          }
+        }
+      }
+    },
+    "Config.SantanderInvoiceDETab": {
+      "label": "Config.SantanderInvoiceDETab",
+      "formFields": {
+        "santander_invoice_de.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_invoice_de.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Santander Invoice Germany"
+          }
+        },
+        "santander_invoice_de.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "Simply pay after delivery."
+          }
+        },
+        "santander_invoice_de.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_invoice_de.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "santander_invoice_de.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "santander_invoice_de.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "199"
+          }
+        },
+        "santander_invoice_de.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "20000"
+          }
+        },
+        "santander_invoice_de.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "DE"
+          }
+        },
+        "santander_invoice_de.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "EUR"
+          }
+        }
+      }
+    },
+    "Config.SantanderFactoringDETab": {
+      "label": "Config.SantanderFactoringDETab",
+      "formFields": {
+        "santander_factoring_de.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_factoring_de.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Santander Factoring"
+          }
+        },
+        "santander_factoring_de.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "Santander Factoring description."
+          }
+        },
+        "santander_factoring_de.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_factoring_de.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "santander_factoring_de.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "santander_factoring_de.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "20"
+          }
+        },
+        "santander_factoring_de.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "1000"
+          }
+        },
+        "santander_factoring_de.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "DE"
+          }
+        },
+        "santander_factoring_de.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "EUR"
+          }
+        }
+      }
+    },
+    "Config.SantanderInstallmentTab": {
+      "label": "Config.SantanderInstallmentTab",
+      "formFields": {
+        "santander_installment.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_installment.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Santander Installment"
+          }
+        },
+        "santander_installment.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "Pay your purchases starting from 99 with Santander Installments. With an annual percentage rate of max. 9,9% (6 - 72 monthly rates)."
+          }
+        },
+        "santander_installment.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_installment.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "santander_installment.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "santander_installment.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "99"
+          }
+        },
+        "santander_installment.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "100000"
+          }
+        },
+        "santander_installment.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "DE"
+          }
+        },
+        "santander_installment.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "EUR"
+          }
+        }
+      }
+    },
+    "Config.SantanderInstallmentATTab": {
+      "label": "Config.SantanderInstallmentATTab",
+      "formFields": {
+        "santander_installment_at.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_installment_at.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Santander Installments AT"
+          }
+        },
+        "santander_installment_at.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": ""
+          }
+        },
+        "santander_installment_at.redirect_method": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverRedirectMethod",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_installment_at.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_installment_at.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "santander_installment_at.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "santander_installment_at.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "99"
+          }
+        },
+        "santander_installment_at.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "100000"
+          }
+        },
+        "santander_installment_at.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "AT"
+          }
+        },
+        "santander_installment_at.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "EUR"
+          }
+        }
+      }
+    },
+    "Config.SantanderInstallmentDKTab": {
+      "label": "Config.SantanderInstallmentDKTab",
+      "formFields": {
+        "santander_installment_dk.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_installment_dk.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Santander Installment DK"
+          }
+        },
+        "santander_installment_dk.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "Make purchases worth 2000 DKK and up with Santander Installments. Maximum annual percentage rate of 9.9% (6 - 72 monthly payments)."
+          }
+        },
+        "santander_installment_dk.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_installment_dk.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "santander_installment_dk.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "santander_installment_dk.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "2000"
+          }
+        },
+        "santander_installment_dk.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "100000"
+          }
+        },
+        "santander_installment_dk.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "DK"
+          }
+        },
+        "santander_installment_dk.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "DKK"
+          }
+        }
+      }
+    },
+    "Config.SantanderInstallmentNOTab": {
+      "label": "Config.SantanderInstallmentNOTab",
+      "formFields": {
+        "santander_installment_no.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_installment_no.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Santander Installment NO"
+          }
+        },
+        "santander_installment_no.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "Vi gir deg mulighet til &aring;  enten utsette betalingen eller &aring;  dele opp betalingen med faste bel&oslash;p hver m&aring; ned i samarbeid med Santander Consumer Bank.&nbsp;"
+          }
+        },
+        "santander_installment_no.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_installment_no.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "santander_installment_no.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "santander_installment_no.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "1990"
+          }
+        },
+        "santander_installment_no.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "80000"
+          }
+        },
+        "santander_installment_no.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "NO"
+          }
+        },
+        "santander_installment_no.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "NOK"
+          }
+        }
+      }
+    },
+    "Config.SantanderInstallmentSETab": {
+      "label": "Config.SantanderInstallmentSETab",
+      "formFields": {
+        "santander_installment_se.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_installment_se.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Santander Installment SE"
+          }
+        },
+        "santander_installment_se.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "Make purchases worth 540 SEK and up with Santander Installments. Maximum annual percentage rate of 9.9% (6 - 72 monthly payments)."
+          }
+        },
+        "santander_installment_se.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "santander_installment_se.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "santander_installment_se.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "santander_installment_se.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "540"
+          }
+        },
+        "santander_installment_se.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "100000"
+          }
+        },
+        "santander_installment_se.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "SE"
+          }
+        },
+        "santander_installment_se.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "SEK"
+          }
+        }
+      }
+    },
+    "Config.SofortTab": {
+      "label": "Config.SofortTab",
+      "formFields": {
+        "sofort.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "sofort.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Sofort"
+          }
+        },
+        "sofort.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "Simply pay while you are shopping online. By entering your familiar online banking login details and confirmation codes with a maximum level of security. The online shop will receive a real-time transaction confirmation immediately after the transfer has been listed."
+          }
+        },
+        "sofort.redirect_method": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverRedirectMethod",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "sofort.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "sofort.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0.15"
+          }
+        },
+        "sofort.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "0.8"
+          }
+        },
+        "sofort.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "sofort.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "100000"
+          }
+        },
+        "sofort.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "BE,NL,CH,HU,DE,AT,SK,GB,IT,PL,ES"
+          }
+        },
+        "sofort.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "EUR"
+          }
+        }
+      }
+    },
+    "Config.PayExFakturaTab": {
+      "label": "Config.PayExFakturaTab",
+      "formFields": {
+        "payex_faktura.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "payex_faktura.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "PayEx Faktura"
+          }
+        },
+        "payex_faktura.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel"
+        },
+        "payex_faktura.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "payex_faktura.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0.35"
+          }
+        },
+        "payex_faktura.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "1.9"
+          }
+        },
+        "payex_faktura.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "0.02"
+          }
+        },
+        "payex_faktura.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "10000"
+          }
+        },
+        "payex_faktura.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "SE,NO"
+          }
+        },
+        "payex_faktura.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "SEK,NOK"
+          }
+        }
+      }
+    },
+    "Config.PayExCreditcardTab": {
+      "label": "Config.PayExCreditcardTab",
+      "formFields": {
+        "payex_creditcard.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "payex_creditcard.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "PayEx Credit Card"
+          }
+        },
+        "payex_creditcard.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel"
+        },
+        "payex_creditcard.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "payex_creditcard.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0.35"
+          }
+        },
+        "payex_creditcard.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "1.9"
+          }
+        },
+        "payex_creditcard.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "0.02"
+          }
+        },
+        "payex_creditcard.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "10000"
+          }
+        },
+        "payex_creditcard.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "all"
+          }
+        },
+        "payex_creditcard.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "all"
+          }
+        }
+      }
+    },
+    "Config.InstantPaymentTab": {
+      "label": "Config.InstantPaymentTab",
+      "formFields": {
+        "instant_payment.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "instant_payment.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Direct bank transfer"
+          }
+        },
+        "instant_payment.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "Upon redirect you'll log in with your online banking crendentials and confirm the bank transfer to the merchant. He'll receive a confirmation immediately and can ship your order right away. Direct bank transfer is a service by Santander, but can be used by customers of any bank."
+          }
+        },
+        "instant_payment.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "instant_payment.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "instant_payment.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "instant_payment.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "instant_payment.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "100000"
+          }
+        },
+        "instant_payment.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "all"
+          }
+        },
+        "instant_payment.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "all"
+          }
+        }
+      }
+    },
+    "Config.OpenbankPaymentTab": {
+      "label": "Config.OpenbankPaymentTab",
+      "formFields": {
+        "openbank.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "openbank.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Openbank"
+          }
+        },
+        "openbank.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "Voldoe in betaalbare maandelijkse termijnen via onze partner Openbank"
+          }
+        },
+        "openbank.redirect_method": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverRedirectMethod",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "openbank.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "openbank.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "openbank.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "openbank.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "50"
+          }
+        },
+        "openbank.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "750"
+          }
+        },
+        "openbank.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "NL"
+          }
+        },
+        "openbank.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "EUR"
+          }
+        }
+      }
+    },
+    "Config.SwedbankCreditCardTab": {
+      "label": "Config.SwedbankCreditCardTab",
+      "formFields": {
+        "swedbank_creditcard.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "swedbank_creditcard.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Swedbank Credit Card"
+          }
+        },
+        "swedbank_creditcard.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "Simply let your customers pay by credit card. We accept MasterCard, Visa, American Express and many more."
+          }
+        },
+        "swedbank_creditcard.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "swedbank_creditcard.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "swedbank_creditcard.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "swedbank_creditcard.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "swedbank_creditcard.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "100000"
+          }
+        },
+        "swedbank_creditcard.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "all"
+          }
+        },
+        "swedbank_creditcard.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "NOK,SEK,DKK,USD,EUR"
+          }
+        }
+      }
+    },
+    "Config.SwedbankInvoiceTab": {
+      "label": "Config.SwedbankInvoiceTab",
+      "formFields": {
+        "swedbank_invoice.active": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverActiveLabel",
+          "options": {
+            "defaultValue": "0",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "swedbank_invoice.title": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverTitleLabel",
+          "options": {
+            "defaultValue": "Swedbank Invoice"
+          }
+        },
+        "swedbank_invoice.description": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverDescriptionLabel",
+          "options": {
+            "defaultValue": "Simply let your customers pay after delivery. You receive your payout before the customer pays the invoice."
+          }
+        },
+        "swedbank_invoice.accept_fee": {
+          "type": "selectBox",
+          "required": false,
+          "label": "Config.payeverAcceptFeeLabel",
+          "options": {
+            "defaultValue": "1",
+            "selectBoxValues": [
+              {
+                "value": "0",
+                "caption": "Config.payeverPossibleValue0"
+              },
+              {
+                "value": "1",
+                "caption": "Config.payeverPossibleValue1"
+              }
+            ]
+          }
+        },
+        "swedbank_invoice.fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "swedbank_invoice.variable_fee": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverVariableFeeLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "swedbank_invoice.min_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMinOrderTotalLabel",
+          "options": {
+            "defaultValue": "0"
+          }
+        },
+        "swedbank_invoice.max_order_total": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverMaxOrderTotalLabel",
+          "options": {
+            "defaultValue": "4755.35"
+          }
+        },
+        "swedbank_invoice.allowed_countries": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCountries",
+          "options": {
+            "defaultValue": "SE,NO,FI"
+          }
+        },
+        "swedbank_invoice.allowed_currencies": {
+          "type": "inputText",
+          "required": false,
+          "label": "Config.payeverAllowedCurrencies",
+          "options": {
+            "defaultValue": "SEK,NOK"
+          }
+        }
+      }
+    }
+  }
+}
