@@ -31,7 +31,7 @@ class RefundEventProcedure
         
         $this->getLogger(__METHOD__)->debug(
             'Payever::debug.refundData',
-            'TransactionId: ' . $orderId
+            'TransactionId: ' . $eventTriggered
         );
         
         /*if (empty($orderId)) {
