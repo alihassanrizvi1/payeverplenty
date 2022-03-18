@@ -27,7 +27,6 @@ class RefundEventProcedure
         PaymentRepositoryContract $paymentContract,
         PayeverHelper $paymentHelper
     ) {
-        die(88);
         $orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
 
         if (empty($orderId)) {
