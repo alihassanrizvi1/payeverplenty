@@ -27,10 +27,10 @@ class RefundEventProcedure
         PaymentRepositoryContract $paymentContract,
         PayeverHelper $paymentHelper
     ) {
-        $orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
+        //$orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
         
         $this->getLogger(__METHOD__)->debug(
-            'Payever::debug.refundData',
+            'Payever::debug.event',
             $eventTriggered
         );
         
