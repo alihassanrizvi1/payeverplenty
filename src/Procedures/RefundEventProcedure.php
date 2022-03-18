@@ -34,12 +34,12 @@ class RefundEventProcedure
             'TransactionId: ' . $orderId
         );
         
-        if (empty($orderId)) {
+        /*if (empty($orderId)) {
             throw new \Exception('Refund payever payment failed! The given order is invalid!');
         }
-        /** @var Payment[] $payment */
+        
         $payments = $paymentContract->getPaymentsByOrderId($orderId);
-        /** @var Payment $payment */
+        
         foreach ($payments as $payment) {
             if ($paymentHelper->isPayeverPaymentMopId($payment->mopId)) {
                 $transactionId = $paymentHelper->getPaymentPropertyValue(
@@ -68,6 +68,6 @@ class RefundEventProcedure
                     }
                 }
             }
-        }
+        }*/
     }
 }
