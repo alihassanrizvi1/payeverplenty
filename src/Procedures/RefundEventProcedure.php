@@ -30,7 +30,10 @@ class RefundEventProcedure
         $orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
 
         $this->getLogger(__METHOD__)->debug('Payever::debug.ExecutePayment', $orderId);
-        die;
+        $this->getLogger(__METHOD__)->debug(
+            'Payever::debug.refundData',
+            'TransactionId: ' . $orderId
+        );
         if (empty($orderId)) {
             throw new \Exception('Refund payever payment failed! The given order is invalid!');
         }
