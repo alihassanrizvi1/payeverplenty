@@ -29,7 +29,7 @@ class RefundEventProcedure
     ) {
         $orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
 
-        var_dump($orderId);
+        print_r($orderId);
         die;
         if (empty($orderId)) {
             throw new \Exception('Refund payever payment failed! The given order is invalid!');
