@@ -30,7 +30,7 @@ class RefundEventProcedure
         //$orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
         
         $this->getLogger(__METHOD__)->debug(
-            'Payever::debug.event',
+            'Payever::Payever::debug.refundResponse',
             $eventTriggered
         );
         
