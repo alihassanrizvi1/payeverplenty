@@ -28,8 +28,8 @@ class RefundEventProcedure
         PaymentRepositoryContract $paymentContract,
         PayeverHelper $paymentHelper
     ) {
-        Debug::dump($eventTriggered);
-        die;
+        Doctrine\Common\Util\Debug::dump($eventTriggered);
+        /*die;
         $orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
         
         if (empty($orderId)) {
@@ -41,7 +41,7 @@ class RefundEventProcedure
         $this->getLogger(__METHOD__)->debug(
             'Payever::debug.refundResponse',
             $payments
-        );
+        );*/
         
         /*foreach ($payments as $payment) {
             if ($paymentHelper->isPayeverPaymentMopId($payment->mopId)) {
