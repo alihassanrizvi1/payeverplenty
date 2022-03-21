@@ -9,6 +9,7 @@ use Plenty\Modules\Payment\Contracts\PaymentRepositoryContract;
 use Plenty\Modules\Payment\Models\Payment;
 use Plenty\Modules\Payment\Models\PaymentProperty;
 use Plenty\Plugin\Log\Loggable;
+use Doctrine\Common\Util\Debug;
 
 class RefundEventProcedure
 {
@@ -27,7 +28,7 @@ class RefundEventProcedure
         PaymentRepositoryContract $paymentContract,
         PayeverHelper $paymentHelper
     ) {
-        \Doctrine\Common\Util\Debug::dump($eventTriggered);
+        Debug::dump($eventTriggered);
         die;
         $orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
         
