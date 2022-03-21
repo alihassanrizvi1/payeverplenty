@@ -27,6 +27,8 @@ class RefundEventProcedure
         PaymentRepositoryContract $paymentContract,
         PayeverHelper $paymentHelper
     ) {
+        \Doctrine\Common\Util\Debug::dump($eventTriggered);
+        die;
         $orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
         
         if (empty($orderId)) {
