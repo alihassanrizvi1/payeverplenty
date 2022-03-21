@@ -9,7 +9,6 @@ use Plenty\Modules\Payment\Contracts\PaymentRepositoryContract;
 use Plenty\Modules\Payment\Models\Payment;
 use Plenty\Modules\Payment\Models\PaymentProperty;
 use Plenty\Plugin\Log\Loggable;
-use Doctrine\Common\Util\Debug;
 
 class RefundEventProcedure
 {
@@ -28,20 +27,18 @@ class RefundEventProcedure
         PaymentRepositoryContract $paymentContract,
         PayeverHelper $paymentHelper
     ) {
-        Doctrine\Common\Util\Debug::dump($eventTriggered);
-        /*die;
         $orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
         
-        if (empty($orderId)) {
+        /*if (empty($orderId)) {
             throw new \Exception('Refund payever payment failed! The given order is invalid!');
-        }
+        }*/
         
         $payments = $paymentContract->getPaymentsByOrderId($orderId);
         
         $this->getLogger(__METHOD__)->debug(
             'Payever::debug.refundResponse',
-            $payments
-        );*/
+            '334'
+        );
         
         /*foreach ($payments as $payment) {
             if ($paymentHelper->isPayeverPaymentMopId($payment->mopId)) {
