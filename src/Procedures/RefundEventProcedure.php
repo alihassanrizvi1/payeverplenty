@@ -27,20 +27,20 @@ class RefundEventProcedure
         PaymentRepositoryContract $paymentContract,
         PayeverHelper $paymentHelper
     ) {
-        //$orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
-        $order = $eventTriggered->getOrder();
-        $this->getLogger(__METHOD__)->debug(
-            'Payever::debug.refundResponse',
-            $order
-        );
+        $orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
         
-        /*if (empty($orderId)) {
+        if (empty($orderId)) {
             throw new \Exception('Refund payever payment failed! The given order is invalid!');
         }
         
         $payments = $paymentContract->getPaymentsByOrderId($orderId);
         
-        foreach ($payments as $payment) {
+        $this->getLogger(__METHOD__)->debug(
+            'Payever::debug.refundResponse',
+            $payments
+        );
+        
+        /*foreach ($payments as $payment) {
             if ($paymentHelper->isPayeverPaymentMopId($payment->mopId)) {
                 $transactionId = $paymentHelper->getPaymentPropertyValue(
                     $payment,
