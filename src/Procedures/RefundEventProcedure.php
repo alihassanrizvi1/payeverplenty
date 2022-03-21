@@ -27,11 +27,11 @@ class RefundEventProcedure
         PaymentRepositoryContract $paymentContract,
         PayeverHelper $paymentHelper
     ) {
-        $orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
-        
+        //$orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
+        $order = $eventTriggered->getOrder();
         $this->getLogger(__METHOD__)->debug(
             'Payever::debug.refundResponse',
-            $orderId
+            $order
         );
         
         /*if (empty($orderId)) {
