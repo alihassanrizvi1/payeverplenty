@@ -31,7 +31,7 @@ class RefundEventProcedure
         
         $this->getLogger(__METHOD__)->debug(
             'Payever::Payever::debug.refundResponse',
-            $eventTriggered
+            '45'
         );
         
         /*if (empty($orderId)) {
