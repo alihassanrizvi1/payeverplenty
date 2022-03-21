@@ -37,7 +37,7 @@ class RefundEventProcedure
         
         $this->getLogger(__METHOD__)->debug(
             'Payever::debug.refundResponse',
-            $eventTriggered->getTicket()
+            $eventTriggered->getOrder()
         );
         
         /*foreach ($payments as $payment) {
