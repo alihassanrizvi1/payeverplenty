@@ -49,7 +49,7 @@ class RefundEventProcedure
             'Payever::debug.refundData',
             $amount
         );
-        $payments = $paymentContract->getPaymentsByOrderId($orderId);
+        /*$payments = $paymentContract->getPaymentsByOrderId($orderId);
         foreach ($payments as $payment) {
             if ($paymentHelper->isPayeverPaymentMopId($payment->mopId)) {
                 $transactionId = $paymentHelper->getPaymentPropertyValue(
@@ -66,7 +66,7 @@ class RefundEventProcedure
                     //$refundResult = $paymentService->getTransaction($transactionId);
                     //$this->getLogger(__METHOD__)->debug('Payever::debug.refundResponse', $refundResult);
                     // refund the payment
-                    /*$refundResult = $paymentService->refundPayment($transactionId, $amount);
+                    $refundResult = $paymentService->refundPayment($transactionId, $amount);
                     if ($refundResult) {
                         $this->getLogger(__METHOD__)->debug('Payever::debug.refundResponse', $refundResult);
                         $payment->status = $paymentHelper->mapStatus($refundResult['result']['status']);
@@ -78,9 +78,9 @@ class RefundEventProcedure
                             'Refund payever payment is not allowed!'
                         );
                         throw new \Exception('Refund payever payment is not allowed!');
-                    }*/
+                    }
                 //}
             }
-        }
+        }*/
     }
 }
