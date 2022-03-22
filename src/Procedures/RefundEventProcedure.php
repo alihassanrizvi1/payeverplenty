@@ -36,11 +36,11 @@ class RefundEventProcedure
         if (!$originOrders->isEmpty() && $originOrders->count() > 0) {
             $originOrder = $originOrders->first();
             
-                $this->getLogger(__METHOD__)->debug(
-                    'Payever::debug.refundResponse',
-                    $originOrder
-                );
-            }
+            $this->getLogger(__METHOD__)->debug(
+                'Payever::debug.refundResponse',
+                $originOrder
+            );
+            
         }
         
         /*if (empty($orderId)) {
