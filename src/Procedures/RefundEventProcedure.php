@@ -39,18 +39,18 @@ class RefundEventProcedure
             throw new \Exception('Refund payever payment failed! The given order is invalid!');
         }
         
-        /*$this->getLogger(__METHOD__)->debug(
+        $this->getLogger(__METHOD__)->debug(
             'Payever::debug.refundResponse',
-            $originOrder
+            $order->orderItems
         );
-        //foreach ($order->getOrderItems() as $items) {
+        /*foreach ($order->getOrderItems() as $items) {
             
-        //}*/
+        }*/
         
         $payments = $paymentContract->getPaymentsByOrderId($orderId);
         foreach ($payments as $payment) {
             if ($paymentHelper->isPayeverPaymentMopId($payment->mopId)) {
-                $transactionId = $paymentHelper->getPaymentPropertyValue(
+                /*$transactionId = $paymentHelper->getPaymentPropertyValue(
                     $payment,
                     PaymentProperty::TYPE_TRANSACTION_ID
                 );
@@ -58,7 +58,8 @@ class RefundEventProcedure
                 $this->getLogger(__METHOD__)->debug(
                     'Payever::debug.refundData',
                     'TransactionId: ' . $transactionId . ', amount: ' . $amount
-                );
+                );*/
+                
                 /*if ($transactionId > 0) {
                     // refund the payment
                     $refundResult = $paymentService->refundPayment($transactionId, $amount);
