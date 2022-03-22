@@ -27,35 +27,28 @@ class RefundEventProcedure
         PaymentRepositoryContract $paymentContract,
         PayeverHelper $paymentHelper
     ) {
+        $orderId = false;
         $order = $eventTriggered->getOrder();
-        //$orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
-        //$orderId = $order->orderReferences->originOrderId;
-        
-        
         $originOrders = $order->originOrders;
         if (!$originOrders->isEmpty() && $originOrders->count() > 0) {
             $originOrder = $originOrders->first();
-            
-            $this->getLogger(__METHOD__)->debug(
-                'Payever::debug.refundResponse',
-                $originOrder
-            );
-            
+            $orderId = $originOrder->id;
         }
         
-        /*if (empty($orderId)) {
+        if (empty($orderId)) {
             throw new \Exception('Refund payever payment failed! The given order is invalid!');
-        }*/
+        }
         
-        //$payments = $paymentContract->getPaymentsByOrderId($orderId);
-        
-        
-        
+        /*$this->getLogger(__METHOD__)->debug(
+            'Payever::debug.refundResponse',
+            $originOrder
+        );
         //foreach ($order->getOrderItems() as $items) {
             
-        //}
+        //}*/
         
-        /*foreach ($payments as $payment) {
+        $payments = $paymentContract->getPaymentsByOrderId($orderId);
+        foreach ($payments as $payment) {
             if ($paymentHelper->isPayeverPaymentMopId($payment->mopId)) {
                 $transactionId = $paymentHelper->getPaymentPropertyValue(
                     $payment,
@@ -66,7 +59,7 @@ class RefundEventProcedure
                     'Payever::debug.refundData',
                     'TransactionId: ' . $transactionId . ', amount: ' . $amount
                 );
-                if ($transactionId > 0) {
+                /*if ($transactionId > 0) {
                     // refund the payment
                     $refundResult = $paymentService->refundPayment($transactionId, $amount);
                     if ($refundResult) {
@@ -81,8 +74,8 @@ class RefundEventProcedure
                         );
                         throw new \Exception('Refund payever payment is not allowed!');
                     }
-                }
+                }*/
             }
-        }*/
+        }
     }
 }
