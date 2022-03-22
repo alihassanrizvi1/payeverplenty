@@ -39,11 +39,15 @@ class RefundEventProcedure
             throw new \Exception('Refund payever payment failed! The given order is invalid!');
         }
         
-        
+        $amount = 0;
         foreach ($order->orderItems as $item) {
+            $quantity = $item->quantity;
+            $price = $item->amounts->first()->priceGross;
+            $amount += ($quantity * $price);
+                
             $this->getLogger(__METHOD__)->debug(
                 'Payever::debug.refundResponse',
-                $item->amounts->first()
+                $amount
             );
         }
         
