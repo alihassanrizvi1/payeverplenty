@@ -29,7 +29,19 @@ class RefundEventProcedure
     ) {
         $order = $eventTriggered->getOrder();
         //$orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
-        $orderId = $order->orderReferences->originOrderId;
+        //$orderId = $order->orderReferences->originOrderId;
+        
+        
+        $originOrders = $order->originOrders;
+        if (!$originOrders->isEmpty() && $originOrders->count() > 0) {
+            $originOrder = $originOrders->first();
+            
+                $this->getLogger(__METHOD__)->debug(
+                    'Payever::debug.refundResponse',
+                    $originOrder
+                );
+            }
+        }
         
         /*if (empty($orderId)) {
             throw new \Exception('Refund payever payment failed! The given order is invalid!');
@@ -37,10 +49,7 @@ class RefundEventProcedure
         
         //$payments = $paymentContract->getPaymentsByOrderId($orderId);
         
-        $this->getLogger(__METHOD__)->debug(
-            'Payever::debug.refundResponse',
-            $orderId
-        );
+        
         
         //foreach ($order->getOrderItems() as $items) {
             
