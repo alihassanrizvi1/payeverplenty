@@ -29,7 +29,7 @@ class RefundEventProcedure
     ) {
         $order = $eventTriggered->getOrder();
         //$orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
-        $orderId = $order->getOrderReferences()->getOriginOrderId();
+        $orderId = $order->orderReferences->originOrderId;
         
         /*if (empty($orderId)) {
             throw new \Exception('Refund payever payment failed! The given order is invalid!');
@@ -42,9 +42,9 @@ class RefundEventProcedure
             $orderId
         );
         
-        foreach ($order->getOrderItems() as $items) {
+        //foreach ($order->getOrderItems() as $items) {
             
-        }
+        //}
         
         /*foreach ($payments as $payment) {
             if ($paymentHelper->isPayeverPaymentMopId($payment->mopId)) {
