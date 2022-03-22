@@ -36,7 +36,7 @@ class RefundEventProcedure
         }
         
         if (empty($orderId)) {
-            throw new \Exception('Refund payever payment failed! The given order is invalid!');
+            //throw new \Exception('Refund payever payment failed! The given order is invalid!');
         }
         
         $amount = 0;
