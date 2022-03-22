@@ -60,19 +60,19 @@ class RefundEventProcedure
                     'TransactionId: ' . $transactionId . ', amount: ' . $amount
                 );
                 
-                if ($transactionId > 0) {
+                if ($transactionId) {
                     $transaction = $paymentService->getTransaction($transactionId);
                     $this->getLogger(__METHOD__)->debug('Payever::debug.transactionData', $transaction);
                     
                     // partial cancel
-                    //if ($paymentHelper->isAllowedTransaction($transaction, 'cancel')) {
-                        
-                    //}
+                    if ($paymentHelper->isAllowedTransaction($transaction, 'cancel')) {
+                        $this->getLogger(__METHOD__)->debug('Payever::debug.transactionData', 'can');
+                    }
                     
                     // partial refund
-                    //if ($paymentHelper->isAllowedTransaction($transaction, 'refund')) {
-                        
-                    //}
+                    if ($paymentHelper->isAllowedTransaction($transaction, 'refund')) {
+                        $this->getLogger(__METHOD__)->debug('Payever::debug.transactionData', 'ref');
+                    }
                 }
             }
         }
