@@ -673,7 +673,7 @@ HTML;
             /** @var \Plenty\Modules\Item\Item\Models\ItemText $itemText */
             $itemText = $item->texts;
             $basketItem['name'] = $itemText->first()->name1;
-            $basketItem['sku'] = (string) $basketItem->itemId;
+            $basketItem['sku'] = "test";
             $payeverRequestParams['basketItems'][] = $basketItem;
         }
         // Fill the country for payever parameters
