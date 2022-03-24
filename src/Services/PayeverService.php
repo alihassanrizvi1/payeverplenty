@@ -415,7 +415,7 @@ HTML;
             'channel' => 'plentymarkets',
             'amount' => round(($basket->basketAmount - $feeAmount), 2), // basketAmount
             'fee' => round(($basket->shippingAmount - $feeAmount), 2),
-            'order_id' => '00' . $orderId,
+            'order_id' => 'stub_' . $orderId,
             'currency' => $basket->currency,
             'cart' => $this->getOrderProducts($payeverRequestParams['basketItems']),
             'payment_method' => $method,
