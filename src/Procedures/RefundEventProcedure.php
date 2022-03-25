@@ -54,11 +54,6 @@ class RefundEventProcedure
                     $payment,
                     PaymentProperty::TYPE_TRANSACTION_ID
                 );
-               
-                $this->getLogger(__METHOD__)->debug(
-                    'Payever::debug.refundData',
-                    'TransactionId: ' . $transactionId . ', amount: ' . $amount
-                );
                 
                 if ($transactionId) {
                     $transaction = $paymentService->getTransaction($transactionId);
