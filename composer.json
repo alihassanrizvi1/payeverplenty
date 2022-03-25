@@ -9,7 +9,7 @@
   "require-dev": {
     "plentymarkets/plugin-interface": "dev-beta7",
     "plentymarkets/plugin-io": "^5.0.5",
-    "payever/sdk-php": "3.0.4",
+    "payever/sdk-php": "3.0.13",
     "payever/plugins-stub": "^1.20",
     "phpunit/phpunit": "^9.5",
     "squizlabs/php_codesniffer": "^3.5",
