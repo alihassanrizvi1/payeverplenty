@@ -63,16 +63,17 @@ class RefundEventProcedure
                 if ($transactionId) {
                     $transaction = $paymentService->getTransaction($transactionId);
                     $this->getLogger(__METHOD__)->debug('Payever::debug.transactionData', $transaction);
-                    
-                    $this->getLogger(__METHOD__)->debug('Payever::debug.refundResponse', $paymentHelper->isAllowedTransaction($transaction, 'cancel'));
+                   
                     // partial cancel
                     if ($paymentHelper->isAllowedTransaction($transaction, 'cancel')) {
-                        $this->getLogger(__METHOD__)->debug('Payever::debug.refundResponse', 'can');
+                        $cancelResult = $paymentService->cancelPayment($transactionId, $amount);
+                        $this->getLogger(__METHOD__)->debug('Payever::debug.cancelResponse', $cancelResult);
                     }
                     
                     // partial refund
                     if ($paymentHelper->isAllowedTransaction($transaction, 'refund')) {
-                        $this->getLogger(__METHOD__)->debug('Payever::debug.transactionData', 'ref');
+                        $refundResult = $paymentService->refundPayment($transactionId, $amount);
+                        $this->getLogger(__METHOD__)->debug('Payever::debug.refundResponse', $refundResult);
                     }
                 }
             }
