@@ -35,7 +35,7 @@
     "Ceres":">=4.0.0"
   },
   "dependencies": {
-    "payever/sdk-php": "3.0.8"
+    "payever/sdk-php": "3.0.13"
   },
   "runOnBuild"        : [
     "Payever\\Migrations\\CreatePayeverPaymentMethods8",
