@@ -961,11 +961,15 @@ HTML;
      * Cancel the given payment
      *
      * @param string $transactionId
+     * @param float $amount
      * @return bool|mixed
      */
-    public function cancelPayment(string $transactionId)
+    public function cancelPayment(string $transactionId, float $amount = null)
     {
-        return $this->sdkService->call('cancelPaymentRequest', ['transaction_id' => $transactionId]);
+        return $this->sdkService->call(
+            'cancelPaymentRequest', 
+            ['transaction_id' => $transactionId, 'amount' => $amount]
+        );
     }
 
     /**
