@@ -27,8 +27,15 @@ class ShippingEventProcedure
         PaymentRepositoryContract $paymentContract,
         PayeverHelper $paymentHelper
     ) {
-        die(666);
         $orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
+        $order = $eventTriggered->getOrder();
+        $this->getLogger(__METHOD__)->debug('Payever::debug.transactionData', $order->orderItems);
+        foreach ($order->orderItems as $item) {
+            //$quantity = $item->quantity;
+            //$price = $item->amounts->first()->priceGross;
+            //$amount += ($quantity * $price);
+        }
+
 
         if (empty($orderId)) {
             throw new \Exception('Shipping goods payever payment action is failed! The given order is invalid!');
