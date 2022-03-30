@@ -29,7 +29,7 @@ class ShippingEventProcedure
     ) {
         $orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
         $order = $eventTriggered->getOrder();
-        $this->getLogger(__METHOD__)->debug('Payever::debug.transactionData', $order->orderItems);
+        $this->getLogger(__METHOD__)->debug('Payever::debug.transactionData', $order);
         foreach ($order->orderItems as $item) {
             //$quantity = $item->quantity;
             //$price = $item->amounts->first()->priceGross;
