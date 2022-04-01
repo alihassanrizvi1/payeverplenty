@@ -60,7 +60,7 @@ class ShippingEventProcedure
         $orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
         
         $packages = $this->orderShippingPackage->listOrderShippingPackages($orderId);
-        $shippingInformation = $this->shippingInformationRepositoryContract->find(6);
+        //$shippingInformation = $this->shippingInformationRepositoryContract->find(6);
 
 
         $order = $eventTriggered->getOrder();
