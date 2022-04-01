@@ -5,8 +5,11 @@ namespace Payever\Procedures;
 use Payever\Helper\PayeverHelper;
 use Payever\Services\PayeverService;
 use Plenty\Modules\EventProcedures\Events\EventProceduresTriggered;
+
 use Plenty\Modules\Order\Shipping\Package\Contracts\OrderShippingPackageRepositoryContract;
 use Plenty\Modules\Order\Shipping\Information\Contracts\ShippingInformationRepositoryContract;
+use Plenty\Modules\Item\ItemShippingProfiles\Contracts\ItemShippingProfilesRepositoryContract ;
+    
 use Plenty\Modules\Payment\Contracts\PaymentRepositoryContract;
 use Plenty\Modules\Payment\Models\Payment;
 use Plenty\Modules\Payment\Models\PaymentProperty;
@@ -22,7 +25,7 @@ class ShippingEventProcedure
     private $orderShippingPackage;
     
     /**
-     * @var ShippingInformationRepositoryContract
+     * @var ItemShippingProfilesRepositoryContract
      */
     private $shippingInformationRepositoryContract;
     
@@ -30,11 +33,11 @@ class ShippingEventProcedure
      * ShipmentController constructor.
      *
      * @param OrderShippingPackageRepositoryContract $orderShippingPackage
-     * @param ShippingInformationRepositoryContract $shippingInformationRepositoryContract
+     * @param ItemShippingProfilesRepositoryContract $shippingInformationRepositoryContract
      */
     public function __construct(
         OrderShippingPackageRepositoryContract $orderShippingPackage, 
-        ShippingInformationRepositoryContract $shippingInformationRepositoryContract
+        ItemShippingProfilesRepositoryContract $shippingInformationRepositoryContract
     )
     {
         $this->orderShippingPackage = $orderShippingPackage;
@@ -57,11 +60,11 @@ class ShippingEventProcedure
         $orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
         
         $packages = $this->orderShippingPackage->listOrderShippingPackages($orderId);
-        $shippingInformation = $this->shippingInformationRepositoryContract->getShippingInformationByOrderId($orderId);
+        $shippingInformation = $this->shippingInformationRepositoryContract->find(6);
 
 
         $order = $eventTriggered->getOrder();
-        $this->getLogger(__METHOD__)->debug('Payever::debug.transactionData', $packages);
+        $this->getLogger(__METHOD__)->debug('Payever::debug.transactionData', $shippingInformation);
         foreach ($order->orderItems as $item) {
             //$quantity = $item->quantity;
             //$price = $item->amounts->first()->priceGross;
