@@ -6,6 +6,7 @@ use Payever\Helper\PayeverHelper;
 use Payever\Services\PayeverService;
 use Plenty\Modules\EventProcedures\Events\EventProceduresTriggered;
 use Plenty\Modules\Order\Shipping\Package\Contracts\OrderShippingPackageRepositoryContract;
+use Plenty\Modules\Order\Shipping\Information\Contracts\ShippingInformationRepositoryContract;
 use Plenty\Modules\Payment\Contracts\PaymentRepositoryContract;
 use Plenty\Modules\Payment\Models\Payment;
 use Plenty\Modules\Payment\Models\PaymentProperty;
@@ -21,13 +22,23 @@ class ShippingEventProcedure
     private $orderShippingPackage;
     
     /**
+     * @var ShippingInformationRepositoryContract
+     */
+    private $shippingInformationRepositoryContract;
+    
+    /**
      * ShipmentController constructor.
      *
      * @param OrderShippingPackageRepositoryContract $orderShippingPackage
+     * @param ShippingInformationRepositoryContract $shippingInformationRepositoryContract
      */
-    public function __construct(OrderShippingPackageRepositoryContract $orderShippingPackage)
+    public function __construct(
+        OrderShippingPackageRepositoryContract $orderShippingPackage, 
+        ShippingInformationRepositoryContract $shippingInformationRepositoryContract
+    )
     {
         $this->orderShippingPackage = $orderShippingPackage;
+        $this->shippingInformationRepositoryContract = $shippingInformationRepositoryContract;
     }
     
     /**
@@ -46,9 +57,11 @@ class ShippingEventProcedure
         $orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
         
         $packages = $this->orderShippingPackage->listOrderShippingPackages($orderId);
+        $shippingInformation = $this->shippingInformationRepositoryContract->getShippingInformationByOrderId($orderId);
+
 
         $order = $eventTriggered->getOrder();
-        $this->getLogger(__METHOD__)->debug('Payever::debug.transactionData', $packages);
+        $this->getLogger(__METHOD__)->debug('Payever::debug.transactionData', $shippingInformation);
         foreach ($order->orderItems as $item) {
             //$quantity = $item->quantity;
             //$price = $item->amounts->first()->priceGross;
