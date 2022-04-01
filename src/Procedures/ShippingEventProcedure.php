@@ -5,6 +5,7 @@ namespace Payever\Procedures;
 use Payever\Helper\PayeverHelper;
 use Payever\Services\PayeverService;
 use Plenty\Modules\EventProcedures\Events\EventProceduresTriggered;
+use Plenty\Modules\Order\Shipping\Package\Contracts\OrderShippingPackageRepositoryContract;
 use Plenty\Modules\Payment\Contracts\PaymentRepositoryContract;
 use Plenty\Modules\Payment\Models\Payment;
 use Plenty\Modules\Payment\Models\PaymentProperty;
@@ -14,6 +15,21 @@ class ShippingEventProcedure
 {
     use Loggable;
 
+    /**
+     * @var OrderShippingPackageRepositoryContract $orderShippingPackage
+     */
+    private $orderShippingPackage;
+    
+    /**
+     * ShipmentController constructor.
+     *
+     * @param OrderShippingPackageRepositoryContract $orderShippingPackage
+     */
+    public function __construct(OrderShippingPackageRepositoryContract $orderShippingPackage)
+    {
+        $this->orderShippingPackage = $orderShippingPackage;
+    }
+    
     /**
      * @param EventProceduresTriggered $eventTriggered
      * @param PayeverService $paymentService
@@ -28,8 +44,11 @@ class ShippingEventProcedure
         PayeverHelper $paymentHelper
     ) {
         $orderId = $paymentHelper->getOrderIdByEvent($eventTriggered);
+        
+        $packages = $this->orderShippingPackage->listOrderShippingPackages($orderId);
+
         $order = $eventTriggered->getOrder();
-        $this->getLogger(__METHOD__)->debug('Payever::debug.transactionData', $order);
+        $this->getLogger(__METHOD__)->debug('Payever::debug.transactionData', $packages);
         foreach ($order->orderItems as $item) {
             //$quantity = $item->quantity;
             //$price = $item->amounts->first()->priceGross;
