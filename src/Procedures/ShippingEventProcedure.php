@@ -61,7 +61,7 @@ class ShippingEventProcedure
 
 
         $order = $eventTriggered->getOrder();
-        $this->getLogger(__METHOD__)->debug('Payever::debug.transactionData', $shippingInformation);
+        $this->getLogger(__METHOD__)->debug('Payever::debug.transactionData', $packages);
         foreach ($order->orderItems as $item) {
             //$quantity = $item->quantity;
             //$price = $item->amounts->first()->priceGross;
